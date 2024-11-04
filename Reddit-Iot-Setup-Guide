@@ -4,6 +4,58 @@ Source [Reddit - eschguy](https://www.reddit.com/r/Ubiquiti/s/24VE03y0HB)
 
 @u/SpeculationMaster
 
-Log into CloudKey ≥ Bottom Left click on "Settings" ≥ "Network" ≥ Create New Network ≥ "VLAN ONLY", Name it "LAN2", Assign it #"10" for example & Assign it different subnet (if main LAN is 192.168.1.1, then assign this 192.168.2.1) ≥ Click on "Wireless Networks" ≥ "Create New Wireless Network", Name the SSID Something Different, Enable "Advanced Options" ≥ Use VLAN "10"  ≥ Click on "Routing & Firewall" ≥ "FIREWALL" ≥  "Lan Local" ≥ "Create New Rule" ≥ Name it whatever you want, Action = REJECT, IPV4 Protocol "All", SOURCE, Source Type = "Network", Select "LAN" ≥ DESTINATION, Destination Type = "Network", Select "LAN2", Save. Click on "Routing & Firewall" ≥ "FIREWALL" ≥  "Lan Local" ≥ "Create New Rule" ≥ Name it whatever you want, Action = ALLOW, IPV4 Protocol "All", SOURCE, Source Type = "Network", Select "LAN2" ≥ DESTINATION, Destination Type = "Network", Select "LAN", Save. I may be forgetting something minor but that is basically the step by step of it. If you also want to add physical ports (Hardwired Connections) and assuming you have Ubiquiti Switches, you can go under "Devices", highlight the switch ≥ Select "Ports" ≥ select the port you want to be part of the secured network, and then change the port profile to NETWORKS, "LAN2".
+-Log into CloudKey ≥ Bottom Left click on "Settings" ≥ "Network" ≥ Create New Network
+
+-"VLAN ONLY", Name it "LAN2", 
+
+-Assign it #"10" for example
+
+-Assign it different subnet (if main LAN is 192.168.1.1, then assign this 192.168.2.1)
+
+-Click on "Wireless Networks" ≥ "Create New Wireless Network"
+
+-Name the SSID Something Different
+
+-Enable "Advanced Options"
+
+-Use VLAN "10"
+
+-Click on "Routing & Firewall" ≥ "FIREWALL" ≥  "Lan Local" ≥ "Create New Rule"
+
+-Name it whatever you want
+
+	-Action = REJECT
+
+	-IPV4 Protocol "All"
+
+	-SOURCE, Source Type = "Network", Select "LAN"
+
+	-DESTINATION, Destination Type = "Network", Select "LAN2"
+
+	-Save
+
+-Click on "Routing & Firewall" ≥ "FIREWALL" ≥  "Lan Local" ≥ "Create New Rule"
+
+	-Name it whatever you want
+
+	-Action = ALLOW
+
+	-IPV4 Protocol "All"
+
+	-SOURCE, Source Type = "Network"
+
+	-Select "LAN2"
+
+	-DESTINATION, Destination Type = "Network"
+
+	-Select "LAN"
+
+	-Save
+
+I may be forgetting something minor but that is basically the step by step of it. 
+
+Note If you also want to add physical ports (Hardwired Connections) and assuming you have Ubiquiti Switches
+
+you can go under "Devices", highlight the switch ≥ Select "Ports" ≥ select the port you want to be part of the secured network, and then change the port profile to NETWORKS, "LAN2".
 
 CHEERS
