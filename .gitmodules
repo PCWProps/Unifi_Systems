@@ -1,0 +1,9 @@
+[submodule "unifi-ddns"]
+	path = unifi-ddns
+	url = https://github.com/Pcw-Life/unifi-ddns.git
+[submodule "unifi-api-client"]
+	path = unifi-api-client
+	url = https://github.com/PCWProps/UniFi-API-client.git
+[submodule "unifi-api-browser"]
+	path = unifi-api-browser
+	url = https://github.com/PCWProps/UniFi-API-browser.git
